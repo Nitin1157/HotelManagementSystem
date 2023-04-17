@@ -1,0 +1,163 @@
+﻿@model IEnumerable<MVCAppSystem.Models.CustomerHistory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<h1>Index</h1>
+    <p>
+    <a asp-action="Create">Create New</a>
+    </p>
+*@
+
+<div class="">
+    <h1 id="h2">Customers History</h1>
+    <div id="a-tag">
+        <a asp-controller="CustomerRegistrations" asp-action="Index" class="btn btn-warning m-2">Back To Dashboard</a>
+    </div>
+    <br />
+</div>
+
+<br />
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.CustomerName)</th>
+            <th>@Html.DisplayNameFor(model => model.RoomNo)</th>
+            <th>@Html.DisplayNameFor(model => model.RoomType)</th>
+           @* <th>@Html.DisplayNameFor(model => model.Bed)</th>*@
+            <th>@Html.DisplayNameFor(model => model.IdProof)</th>
+            <th>@Html.DisplayNameFor(model => model.EmaiId)</th>
+            <th>@Html.DisplayNameFor(model => model.PhoneNo)</th>
+            <th>@Html.DisplayNameFor(model => model.City)</th>
+            @*<th>@Html.DisplayNameFor(model => model.City)</th>
+            <th>@Html.DisplayNameFor(model => model.State)</th>
+            <th>@Html.DisplayNameFor(model => model.PinCode)</th>*@
+            <th>@Html.DisplayNameFor(model => model.Nationality)</th>
+            <th>@Html.DisplayNameFor(model => model.CheckinTime)</th>
+            <th>@Html.DisplayNameFor(model => model.Checkout)</th>
+            <th>@Html.DisplayNameFor(model => model.RoomRent)</th>
+            <th>Actions</th>
+            @*<th>@Html.DisplayNameFor(model => model.IsAllocated)</th>*@
+        </tr>
+    </thead>
+    @*<thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdProof)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmaiId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PinCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nationality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CheckinTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Checkout)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomRent)
+            </th>
+            <th></th>
+        </tr>
+    </thead>*@
+    <tbody>
+@foreach (var items in Model) {
+        <tr>    
+                <td>@Html.DisplayFor(modelItem => items.CustomerName)</td>
+                <td>@Html.DisplayFor(modelItem => items.RoomNo)</td>
+                <td>@Html.DisplayFor(modelItem => items.RoomType)</td>
+                @*<td>@Html.DisplayFor(modelItem => items.Bed)</td>*@
+                <td>@Html.DisplayFor(modelItem => items.IdProof)</td>
+                <td>@Html.DisplayFor(modelItem => items.EmaiId)</td>
+                <td>@Html.DisplayFor(modelItem => items.PhoneNo)</td>
+                <td>@Html.DisplayFor(modelItem => items.City)</td>
+                @*<td>@Html.DisplayFor(model => model.City)</td>
+                 <td>@Html.DisplayFor(model => model.State)</td>
+                 <td>@Html.DisplayFor(model => model.PinCode)</td>*@
+                <td>@Html.DisplayFor(modelItem => items.Nationality)</td>
+                <td>@Html.DisplayFor(modelItem => items.CheckinTime)</td>
+                <td>@Html.DisplayFor(modelItem => items.Checkout)</td>
+                <td>@Html.DisplayFor(modelItem => items.RoomRent)</td>
+              
+            @*<td>
+                @Html.DisplayFor(modelItem => item.RoomNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProof)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmaiId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PinCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nationality)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CheckinTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Checkout)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomRent)
+            </td>*@
+            
+                @*<a asp-action="Edit" asp-route-id="@items.CustomerName">Edit</a> |*@
+              <td>
+                    <a asp-action="View" asp-route-id="@items.CustomerName">Delete</a>
+              </td>
+               @* <a asp-action="Delete" asp-route-id="@items.CustomerName">Delete</a>*@
+           
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,47 @@
+﻿@model MVCAppSystem.Models.Room
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4> Create Room</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RoomNo" class="control-label"></label>
+                <input asp-for="RoomNo" class="form-control" />
+                <span asp-validation-for="RoomNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoomRent" class="control-label"></label>
+                <input asp-for="RoomRent" class="form-control" />
+                <span asp-validation-for="RoomRent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoomType" class="control-label"></label>
+                <input asp-for="RoomType" class="form-control" />
+                <span asp-validation-for="RoomType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bed" class="control-label"></label>
+                <input asp-for="Bed" class="form-control" />
+                <span asp-validation-for="Bed" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsAllocated" /> @Html.DisplayNameFor(model => model.IsAllocated)
+                </label>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-controller="Rooms" asp-action="Index" class="btn btn-warning m-2">Back To Dashboard</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+

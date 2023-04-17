@@ -1,0 +1,71 @@
+﻿@model MVCAppSystem.Models.Room
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+<h3>Room No :- <span>@Html.DisplayFor(model => model.RoomNo)</span></h3>
+<h4>Are you sure you want to delete ?</h4>
+<hr />
+<div>
+   
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.RoomRent)</th>
+                <th>@Html.DisplayNameFor(model => model.RoomType)</th>
+                <th>@Html.DisplayNameFor(model => model.Bed)</th>
+                <th>@Html.DisplayNameFor(model => model.IsAllocated)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>@Html.DisplayFor(model => model.RoomRent)</td>
+                <td>@Html.DisplayFor(model => model.RoomType)</td>
+                <td>@Html.DisplayFor(model => model.Bed)</td>
+                <td>@Html.DisplayFor(model => model.IsAllocated)</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+    @*<dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RoomRent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RoomRent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RoomType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RoomType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsAllocated)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsAllocated)
+        </dd>
+    </dl>*@
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="RoomNo" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back</a>
+    </form>
+</div>

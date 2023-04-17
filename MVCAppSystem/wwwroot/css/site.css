@@ -1,0 +1,114 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 55px;
+    /*width:100vw;
+  height:100vh;*/
+    /* background: #048;
+    background: -webkit-linear-gradient(left top, #027, #48a);
+    background: -moz-linear-gradient(bottom right, #027, #48a);
+    background: linear-gradient(to bottom right, #027, #48a);
+    color: #fff;*/
+/*    background: #f0f0f0;
+    background: url(https://pcbx.us/bfjb.jpg);*/
+}
+/*.master {
+    width: 80vw;
+    height: 80vh;
+    margin:0px auto;
+}*/
+/*.main {
+    width: 80vw;
+    height: 80vh;
+    flex-direction:column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+.navbar-brand {
+    font-style: italic;
+    color: #ff0000;
+}
+
+.main-actions {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.home-view {
+    width: 90vw;
+    height: 80vh;
+    background-image: url("../lib/malvidesbg.jpg");
+    object-fit:contain;
+}
+.admin-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2,h1{
+    font-style:italic;
+}
+#h2{
+    float:left;
+}
+#a-tag{
+    float:right;
+}
+.dash-btn {
+    float: right;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 350px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /*border-radius: 10px 10px;*/
+}
+    .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: center;
+    }
+    .styled-table tbody tr {
+        text-align: center;
+        
+    }
+    .styled-table th,
+    .styled-table td {
+        padding: 7px 10px;
+        
+    }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+       
+    }
+.styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+ }
+.styled-table tbody tr:last-of-type {
+            border-bottom: 3px solid #009879;
+}
+    
+/*.styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #009879;
+    }*/
+span {
+    color: #F39C12;
+}

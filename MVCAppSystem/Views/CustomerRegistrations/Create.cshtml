@@ -1,0 +1,114 @@
+﻿@model MVCAppSystem.Models.CustomerRegistration
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Register Customer</h4>
+<hr />
+
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row my-2">
+        <div class="col ">
+            <label asp-for="RoomNo" class="control-label"></label>
+            <input asp-for="RoomNo" class="form-control" />
+            <span asp-validation-for="RoomNo" class="text-danger"></span>
+            @* <select asp-for="RoomNo" class ="form-control" asp-items="ViewBag.RoomNo"></select>*@
+        </div>
+        <div class="col">
+            <label asp-for="RoomType" class="control-label"></label>
+            <input asp-for="RoomType" class="form-control" />
+            <span asp-validation-for="RoomType" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="Bed" class="control-label"></label>
+            <input asp-for="Bed" class="form-control" />
+            <span asp-validation-for="Bed" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col">
+            <label asp-for="IdProof" class="control-label"></label>
+            <input asp-for="IdProof" class="form-control" />
+            <span asp-validation-for="IdProof" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="CustomerName" class="control-label"></label>
+            <input asp-for="CustomerName" class="form-control" />
+            <span asp-validation-for="CustomerName" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="EmaiId" class="control-label"></label>
+            <input asp-for="EmaiId" class="form-control" />
+            <span asp-validation-for="EmaiId" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col">
+            <label asp-for="PhoneNo" class="control-label"></label>
+            <input asp-for="PhoneNo" class="form-control" />
+            <span asp-validation-for="PhoneNo" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="Address" class="control-label"></label>
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="City" class="control-label"></label>
+            <input asp-for="City" class="form-control" />
+            <span asp-validation-for="City" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col">
+            <label asp-for="State" class="control-label"></label>
+            <input asp-for="State" class="form-control" />
+            <span asp-validation-for="State" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="PinCode" class="control-label"></label>
+            <input asp-for="PinCode" class="form-control" />
+            <span asp-validation-for="PinCode" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="Nationality" class="control-label"></label>
+            <input asp-for="Nationality" class="form-control" />
+            <span asp-validation-for="Nationality" class="text-danger"></span>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col">
+            <label asp-for="CheckinTime" class="control-label"></label>
+            <input asp-for="CheckinTime" class="form-control" />
+            <span asp-validation-for="CheckinTime" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="Checkout" class="control-label"></label>
+            <input asp-for="Checkout" class="form-control" />
+            <span asp-validation-for="Checkout" class="text-danger"></span>
+        </div>
+        <div class="col">
+            <label asp-for="RoomRent" class="control-label"></label>
+            <input asp-for="RoomRent" class="form-control" />
+            <span asp-validation-for="RoomRent" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        @*<div class="col form-check">
+        </div>*@
+        <div class="col main-actions">
+            <label class="form-check-label mx-1">
+                <input class="form-check-input" asp-for="IsAllocated" /> @Html.DisplayNameFor(model => model.IsAllocated)
+            </label>
+            <input type="submit" value="Create" class="btn btn-primary mx-2" />
+            <a asp-controller="CustomerRegistrations" asp-action="Index" class="btn btn-warning m-2">Back To Dashboard</a>
+        </div>
+    </div>
+</form>
+
+
+
+

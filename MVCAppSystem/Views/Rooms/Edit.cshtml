@@ -1,0 +1,47 @@
+﻿ @model MVCAppSystem.Models.Room
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<h3>Room No :- <span>@Html.DisplayFor(model => model.RoomNo)</span></h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RoomNo" readonly/>
+            <div class="form-group">
+                <label asp-for="RoomRent" class="control-label"></label>
+                <input asp-for="RoomRent" class="form-control" />
+                <span asp-validation-for="RoomRent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoomType" class="control-label"></label>
+                <input asp-for="RoomType" class="form-control" />
+                <span asp-validation-for="RoomType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bed" class="control-label"></label>
+                <input asp-for="Bed" class="form-control" />
+                <span asp-validation-for="Bed" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsAllocated" /> @Html.DisplayNameFor(model => model.IsAllocated)
+                </label>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" /> |
+                <a asp-action="Index">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+   
+</div>
+
